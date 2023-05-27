@@ -33,10 +33,11 @@ trait GeneratesSlug
         string $value,
     ): bool {
         $ignoreId = $this->getKey();
+        $idField  = $this->getKeyName();
         $query    = static::where($field, $value);
 
         if ($ignoreId !== null) {
-            $query->where('id', '!=', $ignoreId);
+            $query->where($idField, '!=', $ignoreId);
         }
 
         return $query->exists();
