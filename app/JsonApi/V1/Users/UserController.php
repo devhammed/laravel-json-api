@@ -38,11 +38,7 @@ class UserController extends Controller
 
         return DataResponse::make($user)
             ->withQueryParameters($query)
-            ->withMeta([
-                'token_type'   => 'Bearer',
-                'token_name'   => $tokenName,
-                'access_token' => $accessToken,
-            ])
+            ->withMeta($this->formatTokenMeta($tokenName, $accessToken))
             ->didCreate();
     }
 
@@ -74,11 +70,7 @@ class UserController extends Controller
 
         return DataResponse::make($user)
             ->withQueryParameters($query)
-            ->withMeta([
-                'token_type'   => 'Bearer',
-                'token_name'   => $tokenName,
-                'access_token' => $accessToken,
-            ]);
+            ->withMeta($this->formatTokenMeta($tokenName, $accessToken));
     }
 
     /**
@@ -91,5 +83,21 @@ class UserController extends Controller
             ->delete();
 
         return new Response(null, Response::HTTP_NO_CONTENT);
+    }
+
+    /**
+     * Format token meta.
+     */
+    protected function formatTokenMeta(
+        string $tokenName,
+        string $accessToken
+    ): array {
+        return [
+            'access_token' => [
+                'type'       => 'Bearer',
+                'name'       => $tokenName,
+                'value'      => $accessToken,
+            ],
+        ];
     }
 }
