@@ -6,11 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class LoginRequest extends FormRequest
 {
-    public function authorize()
-    {
-        return true;
-    }
-
     public function rules()
     {
         return [
@@ -47,11 +42,11 @@ class LoginRequest extends FormRequest
     public function attributes()
     {
         return [
-            'data.type'                   => 'type',
-            'data.attributes'             => 'attributes',
-            'data.attributes.email'       => 'email',
-            'data.attributes.password'    => 'password',
-            'data.attributes.token_name'  => 'token name',
+            'data.type'                   => __('form.type'),
+            'data.attributes'             => __('form.attributes'),
+            'data.attributes.email'       => __('form.email'),
+            'data.attributes.password'    => __('form.password'),
+            'data.attributes.token_name'  => __('form.token_name'),
         ];
     }
 }
