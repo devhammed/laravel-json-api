@@ -38,15 +38,4 @@ class LoginRequest extends FormRequest
             ],
         ];
     }
-
-    public function attributes()
-    {
-        return [
-            'data.type'                   => __('form.type'),
-            'data.attributes'             => __('form.attributes'),
-            'data.attributes.email'       => __('form.email'),
-            'data.attributes.password'    => __('form.password'),
-            'data.attributes.token_name'  => __('form.token_name'),
-        ];
-    }
 }

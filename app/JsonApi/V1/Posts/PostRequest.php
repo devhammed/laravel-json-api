@@ -2,6 +2,7 @@
 
 namespace App\JsonApi\V1\Posts;
 
+use App\Rules\Slug;
 use Illuminate\Validation\Rule;
 use LaravelJsonApi\Validation\Rule as JsonApiRule;
 use LaravelJsonApi\Laravel\Http\Requests\ResourceRequest;
@@ -23,11 +24,25 @@ class PostRequest extends ResourceRequest
         }
 
         return [
-            'title'       => ['required', 'string'],
-            'content'     => ['required', 'string'],
-            'slug'        => ['sometimes', 'string', $uniqueSlug],
-            'publishedAt' => ['nullable', JsonApiRule::dateTime()],
-            'tags'        => JsonApiRule::toMany(),
+            'title' => [
+                'required',
+                'string',
+            ],
+            'content' => [
+                'required',
+                'string',
+            ],
+            'slug' => [
+                'sometimes',
+                'string',
+                new Slug(),
+                $uniqueSlug,
+            ],
+            'publishedAt' => [
+                'nullable',
+                JsonApiRule::dateTime(),
+            ],
+            'tags' => JsonApiRule::toMany(),
         ];
     }
 }
