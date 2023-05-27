@@ -19,7 +19,15 @@ class PostObserver
      */
     public function creating(Post $post): void
     {
-        $post->author()->associate($this->auth->user());
+        // Associate the authenticated user with the post.
+        if (!$post->author_id) {
+            $post->author()->associate($this->auth->user());
+        }
+
+        // Generate the post's slug.
+        if (!$post->slug) {
+            $post->slug = $post->generateSlug();
+        }
     }
 
     /**

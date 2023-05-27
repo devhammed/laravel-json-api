@@ -25,7 +25,7 @@ class PostRequest extends ResourceRequest
         return [
             'title'       => ['required', 'string'],
             'content'     => ['required', 'string'],
-            'slug'        => ['required', 'string', $uniqueSlug],
+            'slug'        => ['sometimes', 'string', $uniqueSlug],
             'publishedAt' => ['nullable', JsonApiRule::dateTime()],
             'tags'        => JsonApiRule::toMany(),
         ];
