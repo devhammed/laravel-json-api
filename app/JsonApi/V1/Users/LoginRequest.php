@@ -22,6 +22,10 @@ class LoginRequest extends FormRequest
                 'required',
                 'in:users',
             ],
+            'data.attributes' => [
+                'required',
+                'array',
+            ],
             'data.attributes.token_name' => [
                 'required',
                 'string',
@@ -44,6 +48,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'data.type'                   => 'type',
+            'data.attributes'             => 'attributes',
             'data.attributes.email'       => 'email',
             'data.attributes.password'    => 'password',
             'data.attributes.token_name'  => 'token name',
