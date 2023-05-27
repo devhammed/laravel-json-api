@@ -9,7 +9,7 @@ use App\Providers\RouteServiceProvider;
 use LaravelJsonApi\Core\Document\Error;
 use Symfony\Component\HttpFoundation\Response;
 
-class RedirectIfAuthenticated
+class AllowOnlyGuest
 {
     /**
      * Handle an incoming request.
