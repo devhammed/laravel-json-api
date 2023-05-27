@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Language Lines
@@ -13,8 +12,12 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'invalid'               => 'Invalid credentials.',
+    'conflict'              => 'Authentication conflict.',
+    'unverified'            => 'Email not verified.',
+    'failed'                => 'These credentials do not match our records.',
+    'password'              => 'The provided password is incorrect.',
+    'throttle'              => 'Too many login attempts. Please try again in :seconds seconds.',
+    'already_authenticated' => 'You are already authenticated.',
+    'must_verify_email'     => 'You must verify your email address to access this resource.',
 ];

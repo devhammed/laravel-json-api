@@ -59,9 +59,9 @@ class UserController extends Controller
             !($hash->check($password, $user->password))
         ) {
             return Error::make()
-                ->setTitle('Invalid credentials')
+                ->setTitle(__('auth.invalid'))
                 ->setStatus(Response::HTTP_UNAUTHORIZED)
-                ->setDetail('The provided credentials are invalid.');
+                ->setDetail(__('auth.failed'));
         }
 
         return DataResponse::make($user)

@@ -25,8 +25,8 @@ class AllowOnlyGuest
                 if ($request->expectsJson()) {
                     return Error::make()
                         ->setStatus(Response::HTTP_CONFLICT)
-                        ->setTitle('Authentication conflict.')
-                        ->setDetail('You are already authenticated.')
+                        ->setTitle(__('auth.conflict'))
+                        ->setDetail(__('auth.already_authenticated'))
                         ->toResponse($request);
                 }
 

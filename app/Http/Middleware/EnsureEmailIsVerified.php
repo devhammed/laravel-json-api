@@ -29,8 +29,8 @@ class EnsureEmailIsVerified
             if ($request->expectsJson()) {
                 return Error::make()
                     ->setStatus(Response::HTTP_FORBIDDEN)
-                    ->setTitle('Email not verified.')
-                    ->setDetail('You must verify your email address to access this resource.')
+                    ->setTitle(__('auth.unverified'))
+                    ->setDetail(__('auth.must_verify_email'))
                     ->toResponse($request);
             }
 
