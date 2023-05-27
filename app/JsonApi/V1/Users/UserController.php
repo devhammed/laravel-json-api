@@ -34,11 +34,9 @@ class UserController extends Controller
     ): DataResponse {
         $tokenName = $request->input('data.attributes.token_name');
 
-        $accessToken = $user->createToken($tokenName)->plainTextToken;
-
         return DataResponse::make($user)
             ->withQueryParameters($query)
-            ->withMeta($this->formatTokenMeta($tokenName, $accessToken))
+            ->withMeta($this->createToken($user, $tokenName))
             ->didCreate();
     }
 
@@ -66,11 +64,9 @@ class UserController extends Controller
                 ->setDetail('The provided credentials are invalid.');
         }
 
-        $accessToken = $user->createToken($tokenName)->plainTextToken;
-
         return DataResponse::make($user)
             ->withQueryParameters($query)
-            ->withMeta($this->formatTokenMeta($tokenName, $accessToken));
+            ->withMeta($this->createToken($user, $tokenName));
     }
 
     /**
@@ -86,12 +82,12 @@ class UserController extends Controller
     }
 
     /**
-     * Format token meta.
+     * Create token for user.
      */
-    protected function formatTokenMeta(
-        string $tokenName,
-        string $accessToken
-    ): array {
+    protected function createToken(User $user, string $tokenName): array
+    {
+        $accessToken = $user->createToken($tokenName)->plainTextToken;
+
         return [
             'access_token' => [
                 'type'       => 'Bearer',
