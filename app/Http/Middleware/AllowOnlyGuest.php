@@ -24,7 +24,7 @@ class AllowOnlyGuest
             if (Auth::guard($guard)->check()) {
                 if ($request->expectsJson()) {
                     return Error::make()
-                        ->setStatus(Response::HTTP_BAD_REQUEST)
+                        ->setStatus(Response::HTTP_CONFLICT)
                         ->setTitle('Authentication mismatch')
                         ->setDetail('You are already authenticated.')
                         ->toResponse($request);
