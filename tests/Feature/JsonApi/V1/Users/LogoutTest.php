@@ -14,7 +14,7 @@ class LogoutTest extends TestCase
         $response = $this->jsonApi()
             ->post($route);
 
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
 
         $response->assertJson([
             'jsonapi' => [
@@ -49,7 +49,7 @@ class LogoutTest extends TestCase
             ->withHeader('Authorization', 'Bearer ' . $token->plainTextToken)
             ->post($route);
 
-        $response->assertStatus(204);
+        $response->assertNoContent();
 
         $this->assertDatabaseMissing('personal_access_tokens', $tableData);
     }

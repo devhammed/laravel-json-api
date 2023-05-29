@@ -22,7 +22,7 @@ class LoginTest extends TestCase
             ])
             ->post($route);
 
-        $response->assertStatus(422);
+        $response->assertUnprocessable();
 
         $response->assertJson([
             'jsonapi' => [
@@ -80,7 +80,7 @@ class LoginTest extends TestCase
             ])
             ->post($route);
 
-        $response->assertStatus(401);
+        $response->assertUnauthorized();
 
         $response->assertJson([
             'jsonapi' => [
@@ -113,7 +113,7 @@ class LoginTest extends TestCase
             ])
             ->post($route);
 
-        $response->assertStatus(200);
+        $response->assertOk();
 
         $response->assertJson([
             'jsonapi' => [
