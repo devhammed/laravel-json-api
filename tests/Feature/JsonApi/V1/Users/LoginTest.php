@@ -156,6 +156,7 @@ class LoginTest extends TestCase
             'tokenable_type' => User::class,
             'tokenable_id'   => $user->getRouteKey(),
             'name'           => 'test',
+            'last_used_at'   => null,
         ]);
     }
 }
