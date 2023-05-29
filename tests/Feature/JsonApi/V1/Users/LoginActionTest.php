@@ -5,7 +5,7 @@ namespace Tests\Feature\JsonApi\V1\Users;
 use Tests\TestCase;
 use App\Models\User;
 
-class LoginTest extends TestCase
+class LoginActionTest extends TestCase
 {
     public function test_has_validation_errors(): void
     {

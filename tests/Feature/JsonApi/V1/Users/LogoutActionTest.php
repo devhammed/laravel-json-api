@@ -5,7 +5,7 @@ namespace Tests\Feature\JsonApi\V1\Users;
 use App\Models\User;
 use Tests\TestCase;
 
-class LogoutTest extends TestCase
+class LogoutActionTest extends TestCase
 {
     public function test_cannot_logout_when_not_logged_in(): void
     {
