@@ -1,0 +1,28 @@
+_id: req_283b0a9ed0354d9f9c6c6b13facae4b6
+type: Request
+parentId: fld_64e69225b6f04523a861bd647d3b9282
+modified: 1693836811851
+created: 1685110854197
+url: "{{ _.baseUrl }}/users/2"
+name: Show User
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5132a7e842ef4dda9b0b58ae87cbdd32
+    name: Accept
+    value: application/vnd.api+json
+authentication:
+  disabled: false
+  token: "{% access_token  %}"
+  type: bearer
+metaSortKey: -1685075822136.7695
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

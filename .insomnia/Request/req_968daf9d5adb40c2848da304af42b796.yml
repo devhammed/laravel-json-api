@@ -1,0 +1,42 @@
+_id: req_968daf9d5adb40c2848da304af42b796
+type: Request
+parentId: fld_64e69225b6f04523a861bd647d3b9282
+modified: 1693836811853
+created: 1685112318547
+url: "{{ _.baseUrl }}/users/2"
+name: Update User
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data": {
+        "type": "users",
+        "id": "2",
+        "attributes": {
+          "name": "Hammed Oyedele"
+        }
+      }
+    }
+parameters: []
+headers:
+  - description: ""
+    id: pair_5132a7e842ef4dda9b0b58ae87cbdd32
+    name: Accept
+    value: application/vnd.api+json
+  - id: pair_b2da2ca5a0904ab083ef39a210862c08
+    name: Content-Type
+    value: application/vnd.api+json
+authentication:
+  disabled: false
+  token: "{% access_token  %}"
+  type: bearer
+metaSortKey: -1685075171588.1348
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

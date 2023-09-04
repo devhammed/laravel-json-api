@@ -1,0 +1,36 @@
+_id: req_af5ceaa8a7d34479a8216adf200a80b1
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811855
+created: 1685060591521
+url: "{{ _.baseUrl }}/posts/3/relationships/tags"
+name: Sync Post Tags
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data": []
+    }
+parameters: []
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+  - id: pair_b39802dd05ef4ea3b463dabb5643d710
+    name: Content-Type
+    value: application/vnd.api+json
+authentication:
+  disabled: false
+  token: "{% access_token  %}"
+  type: bearer
+metaSortKey: -1676125233680.914
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

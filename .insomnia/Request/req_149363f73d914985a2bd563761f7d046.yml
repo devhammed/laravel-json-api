@@ -1,0 +1,25 @@
+_id: req_149363f73d914985a2bd563761f7d046
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811849
+created: 1685057491194
+url: "{{ _.baseUrl }}/posts/1/comments"
+name: Show Post Comments
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+authentication: {}
+metaSortKey: -1676617481555.3125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

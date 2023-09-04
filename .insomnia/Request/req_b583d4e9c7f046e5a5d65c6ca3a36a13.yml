@@ -1,0 +1,42 @@
+_id: req_b583d4e9c7f046e5a5d65c6ca3a36a13
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811856
+created: 1685060299986
+url: "{{ _.baseUrl }}/posts/3"
+name: Update Post
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data": {
+        "type": "posts",
+        "id": "3",
+        "attributes": {
+          "published_at": "2021-10-23T11:55:00.000000Z"
+        }
+      }
+    }
+parameters: []
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+  - id: pair_b39802dd05ef4ea3b463dabb5643d710
+    name: Content-Type
+    value: application/vnd.api+json
+authentication:
+  disabled: false
+  token: "{% access_token  %}"
+  type: bearer
+metaSortKey: -1676195554805.8281
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

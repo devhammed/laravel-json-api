@@ -1,0 +1,49 @@
+_id: req_f59e74a8ac414e369461b763caa0df01
+type: Request
+parentId: fld_64e69225b6f04523a861bd647d3b9282
+modified: 1693836811860
+created: 1685093025534
+url: "{{ _.baseUrl }}/users/-actions/login"
+name: Login
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data": {
+        "type": "users",
+        "attributes": {
+          "email": "fwill@example.org",
+          "password": "password",
+          "token_name": "Insomnia"
+        }
+      }
+    }
+parameters:
+  - description: ""
+    disabled: true
+    id: pair_f9ded3b2cfbe49e69dea7ccce632e48d
+    name: fields[users]
+    value: name,email
+headers:
+  - description: ""
+    id: pair_cf13369f0b954e0a8087e43f1129fc7f
+    name: Accept
+    value: application/vnd.api+json
+  - id: pair_d223bce49c4c4659a421abe2e2d642ad
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_9fe615f02a2d4e50ba604d64bdfe4dfd
+    name: JSONPath-filter
+    value: $.meta.access_token.value
+authentication: {}
+metaSortKey: -1685076554003.9836
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

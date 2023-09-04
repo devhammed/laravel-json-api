@@ -1,0 +1,40 @@
+_id: req_23b0b374e2ff420caef75dcfc3d565e6
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811850
+created: 1685056016545
+url: "{{ _.baseUrl }}/posts"
+name: List Posts
+description: ""
+method: GET
+body: {}
+parameters:
+  - description: ""
+    disabled: true
+    id: pair_4af66d9d1e8e49aaae5ee240d4ddeaca
+    name: page[number]
+    value: "1"
+  - description: ""
+    disabled: true
+    id: pair_eb69188f5cda44c6bbbf57bb4814f8a0
+    name: page[size]
+    value: "100"
+  - description: ""
+    disabled: true
+    id: pair_0393d803487b4e97b4c6423546df5e87
+    name: sort
+    value: -created_at
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+authentication: {}
+metaSortKey: -1685056016545
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

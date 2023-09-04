@@ -1,0 +1,28 @@
+_id: req_deeee15e3507438197867a0f6293fcae
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811857
+created: 1685061061516
+url: "{{ _.baseUrl }}/posts/3"
+name: Delete Post
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+authentication:
+  disabled: false
+  token: "{% access_token  %}"
+  type: bearer
+metaSortKey: -1676063702696.6143
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_3b2864b8d4d84d54926cab6fe1fcbcb5
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811851
+created: 1685057308725
+url: "{{ _.baseUrl }}/posts/2/author"
+name: Show Post Author
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+authentication: {}
+metaSortKey: -1679219363177.1328
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,42 @@
+_id: req_3fa34fde5e8040ef84ccde20829689bc
+type: Request
+parentId: fld_64e69225b6f04523a861bd647d3b9282
+modified: 1693836811852
+created: 1685106480074
+url: "{{ _.baseUrl }}/users"
+name: Create User
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data": {
+        "type": "users",
+        "attributes": {
+          "name": "Hammed Oyedele",
+          "email": "user@example.net",
+          "password": "password",
+          "password_confirmation": "password",
+          "token_name": "Insomnia"
+        }
+      }
+    }
+parameters: []
+headers:
+  - description: ""
+    id: pair_cf13369f0b954e0a8087e43f1129fc7f
+    name: Accept
+    value: application/vnd.api+json
+  - id: pair_d223bce49c4c4659a421abe2e2d642ad
+    name: Content-Type
+    value: application/vnd.api+json
+authentication: {}
+metaSortKey: -1685076188070.3765
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

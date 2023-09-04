@@ -1,0 +1,28 @@
+_id: req_1190caf4d7d1413cb0420c32c9840c4f
+type: Request
+parentId: fld_64e69225b6f04523a861bd647d3b9282
+modified: 1693836811848
+created: 1685095433911
+url: "{{ _.baseUrl }}/users/-actions/logout"
+name: Logout
+description: ""
+method: POST
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_a851e574e8a542f5a52048779e674122
+    name: Accept
+    value: application/vnd.api+json
+authentication:
+  disabled: false
+  token: "{% access_token  %}"
+  type: bearer
+metaSortKey: -1685076371037.1802
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

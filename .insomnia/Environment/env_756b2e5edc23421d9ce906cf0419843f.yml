@@ -1,0 +1,14 @@
+_id: env_756b2e5edc23421d9ce906cf0419843f
+type: Environment
+parentId: env_d19e95b1379b87a9f2a7da8dd16013784c55ccc5
+modified: 1693836811846
+created: 1685055985310
+name: Development
+data:
+  baseUrl: http://laravel-json-api.test/api/v1
+dataPropertyOrder:
+  "&":
+    - baseUrl
+color: "#7d69cb"
+isPrivate: false
+metaSortKey: 1685055985310

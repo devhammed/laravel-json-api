@@ -1,0 +1,25 @@
+_id: req_ee664828437845bcb721680b782a852b
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811859
+created: 1685057477827
+url: "{{ _.baseUrl }}/posts/3/tags"
+name: Show Post Tags
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+authentication: {}
+metaSortKey: -1677883261803.7656
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

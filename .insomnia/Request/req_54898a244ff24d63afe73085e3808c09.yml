@@ -1,0 +1,41 @@
+_id: req_54898a244ff24d63afe73085e3808c09
+type: Request
+parentId: fld_576f5f413d074f71a32fa0bc1ae7a1d0
+modified: 1693836811853
+created: 1685060860944
+url: "{{ _.baseUrl }}/posts/3/relationships/tags"
+name: Detach Post Tags
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data": [
+        {
+          "type": "tags",
+          "id": "2"
+        }
+      ]
+    }
+parameters: []
+headers:
+  - description: ""
+    id: pair_cb10f0648cd5453c905275bed695fa72
+    name: Accept
+    value: application/vnd.api+json
+  - id: pair_b39802dd05ef4ea3b463dabb5643d710
+    name: Content-Type
+    value: application/vnd.api+json
+authentication:
+  disabled: false
+  token: "{% access_token  %}"
+  type: bearer
+metaSortKey: -1676072492837.2285
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
